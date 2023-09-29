@@ -1,7 +1,7 @@
 // @ts-check
 // import { strict as assert } from 'node:assert';
 // import assert from 'power-assert';
-import { test, expect } from '@jest/globals';
+import { test, expect, beforeAll } from '@jest/globals';
 import reverse from "../src/index.js";
 // JEST JEST JEST JEST JEST JEST JEST JEST JEST JEST
 // Проверка равенства по ссылке
@@ -50,6 +50,19 @@ import reverse from "../src/index.js";
 //     // Иначе матчер не сможет перехватить исключение
 //     expect(() => stack.pop()).toThrow();
 //   });
+
+// функция beforeAll позволяет нам работать с динамичесскими переменными
+// чтобы каждый тест опирался именно на ту переменную которая будет
+// в данный момент актуальна
+// функция принимает в себя ФУНКИЦИЮ!
+// let now;
+// beforeEach(() => {
+//   now = Date();
+// })
+// если нужно выполнить код один раз передм всеми тестами то
+// beforeAll(() => {
+//   fileData = fs.readFileSync('path/to/file');
+// });
 
 test("reverse", () => {
   expect(reverse("hello")).toEqual("olleh");
