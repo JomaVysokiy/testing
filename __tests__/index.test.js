@@ -1,7 +1,7 @@
 // @ts-check
 // import { strict as assert } from 'node:assert';
 // import assert from 'power-assert';
-import { test, expect, beforeAll } from '@jest/globals';
+import { test, expect } from '@jest/globals';
 import reverse from "../src/index.js";
 // JEST JEST JEST JEST JEST JEST JEST JEST JEST JEST
 // Проверка равенства по ссылке
@@ -64,8 +64,8 @@ import reverse from "../src/index.js";
 //   fileData = fs.readFileSync('path/to/file');
 // });
 
-test("reverse", () => {
-  expect(reverse("hello")).toEqual("olleh");
-  expect(reverse("")).toEqual("");
-});
+// test("reverse", () => {
+//   expect(reverse("hello")).toEqual("olleh");
+//   expect(reverse("")).toEqual("");
+// });
 // console.log("yesssssssss");

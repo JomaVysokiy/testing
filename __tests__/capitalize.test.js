@@ -1,13 +1,23 @@
-// import capitalize from '../src/capitalize.js';
+import capitalize from '../src/capitalize.js';
 // import { strict as assert } from 'node:assert';
-import assert from 'power-assert';
+// import assert from 'power-assert';
+import { test, expect, beforeEach } from '@jest/globals';
 
-const user = {
-    name: 'Madonna',
-  };
-  assert(user.name === 'Michel');
+// let str;
+// beforeEach(() => {
+//   str = 'hello';
+// })
 
-console.log('Все тесты пройдены!');  
+test('capitalize', () => {
+  expect(capitalize(str).toEqual('Hello'));
+  expect(capitalize('hello')).toEqual('Hello');
+})
+
+// let text = 'hello';
+// assert(capitalize(text) === 'Hello')
+// console.log('completed')
+
+// console.log('Все тесты пройдены!');  
 // assert.equal(capitalize('hello'), 'Hello');
 // assert.equal(capitalize(''), '');
 // assert.strictEqual(isPrime(3),true) - тестирование со значением
@@ -24,3 +34,10 @@ console.log('Все тесты пройдены!');
 // const zero = 0;
 // const two = 2;
 // assert(array.indexOf(zero) === two);
+
+// let str;
+// beforeAll(() => {
+//   str = 'hello'
+// })
+
+
