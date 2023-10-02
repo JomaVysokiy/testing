@@ -3,13 +3,13 @@ import capitalize from '../src/capitalize.js';
 // import assert from 'power-assert';
 import { test, expect, beforeEach } from '@jest/globals';
 
-// let str;
-// beforeEach(() => {
-//   str = 'hello';
-// })
+let str;
+beforeEach(() => {
+  str = 'artem';
+})
 
 test('capitalize', () => {
-  expect(capitalize(str).toEqual('Hello'));
+  expect(capitalize(str)).toEqual('Artem');
   expect(capitalize('hello')).toEqual('Hello');
 })
 

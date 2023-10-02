@@ -3,6 +3,10 @@
 // import assert from 'power-assert';
 import { test, expect } from '@jest/globals';
 import reverse from "../src/index.js";
+
+test('reverse', () => {
+    expect(reverse('artem')).toEqual('metra')
+})
 // JEST JEST JEST JEST JEST JEST JEST JEST JEST JEST
 // Проверка равенства по ссылке
 // assert.equal([1, 2], [1, 2])
